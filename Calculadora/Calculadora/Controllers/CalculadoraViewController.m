@@ -36,14 +36,17 @@
     // Pass the selected object to the new view controller.
 }
 */
+-(void)resetValues{
+    primerNumero = 0;
+    segundoNumero = 0;
+    seHizoCalculo = NO;
+    operacionActual = 0;
+}
 
 - (IBAction)agregarNumero:(UIButton *)sender {
     if (seHizoCalculo){
-        primerNumero = 0;
-        segundoNumero = 0;
+        [self resetValues];
         self.resultado.text = @"0";
-        seHizoCalculo = NO;
-        operacionActual = 0;
     }
     if ([self.resultado.text isEqualToString: @"0"]){
         self.resultado.text = sender.titleLabel.text;
@@ -61,19 +64,30 @@
     switch (sender.tag) {
         case 1:
             NSLog(@"division");
+            segundoNumero = primerNumero / [self.resultado.text doubleValue];
+            self.resultado.text = [NSString stringWithFormat:@"%@", [NSNumber numberWithDouble:segundoNumero]];
+            seHizoCalculo = YES;
             break;
         case 2:
             NSLog(@"multiplicacion");
+            segundoNumero = primerNumero * [self.resultado.text doubleValue];
+            self.resultado.text = [NSString stringWithFormat:@"%@", [NSNumber numberWithDouble:segundoNumero]];
+            seHizoCalculo = YES;
             break;
         case 3:
             NSLog(@"resta");
+            segundoNumero = primerNumero - [self.resultado.text doubleValue];
+            self.resultado.text = [NSString stringWithFormat:@"%@", [NSNumber numberWithDouble:segundoNumero]];
+            seHizoCalculo = YES;
             break;
         case 4:
             NSLog(@"suma");
                segundoNumero = primerNumero + [self.resultado.text doubleValue];
                 self.resultado.text = [NSString stringWithFormat:@"%@", [NSNumber numberWithDouble:segundoNumero]];
             seHizoCalculo = YES;
-            break; 
+            break;
+            
+            
         default:
             break;
         }
@@ -81,9 +95,14 @@
 }
 
 - (IBAction)mostrarResultado:(id)sender {
-    UIButton *buttonWithTag = [[UIButton alloc] init];
-    buttonWithTag.tag = operacionActual;
-    [self realizarOperacion:buttonWithTag];
+    if (primerNumero != 0){
+        //se ha asignado el primer valor y esta listo para realizar operacion
+        UIButton *buttonWithTag = [[UIButton alloc] init];
+        buttonWithTag.tag = operacionActual;
+        [self realizarOperacion:buttonWithTag];
+    }
+    
+    
 }
 
 
