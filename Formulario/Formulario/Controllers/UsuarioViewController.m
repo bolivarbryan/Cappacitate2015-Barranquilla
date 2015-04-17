@@ -51,6 +51,10 @@
         self.botonGuardar.enabled = YES;
     }
 }
+-(void)mostrarEnAlerta:(Usuario *)sender{
+    [[[UIAlertView alloc] initWithTitle:@"Formulario" message:[NSString stringWithFormat:@"El usuario %@ %@ ha sido creado y su numero de telefono es %@", sender.nombre , sender.apellido, sender.telefono] delegate:self cancelButtonTitle:@"Yahoo!" otherButtonTitles: nil] show];
+}
+
 - (IBAction)guardar:(id)sender {
     
     [self.nombreTextField resignFirstResponder];
@@ -63,13 +67,14 @@
     user.telefono = [NSNumber numberWithInt:[self.telefono.text intValue]];
     
     UILabel *resultadoLbl = [[UILabel alloc] init];
-    resultadoLbl.text =  [NSString stringWithFormat:@"El usuario %@ %@ ha sido creado y su numero de telefono es %@", user.nombre , user.apellido, user.telefono];
+    resultadoLbl.text = [NSString stringWithFormat:@"El usuario %@ %@ ha sido creado y su numero de telefono es %@", user.nombre , user.apellido, user.telefono];
     
     resultadoLbl.font = [UIFont fontWithName:@"Helvetica" size:20.0f];
     [resultadoLbl setFrame:CGRectMake(20, 420, 300, 60)];
     resultadoLbl.numberOfLines = 2;
     [self.view addSubview:resultadoLbl];
     
+    [self mostrarEnAlerta:user];
     // el ususario x, y ha sido creado. y cuyo telefono es z.
 }
 @end
