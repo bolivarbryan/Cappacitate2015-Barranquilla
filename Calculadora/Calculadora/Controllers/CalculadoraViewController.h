@@ -8,7 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CalculadoraViewController : UIViewController
+@interface CalculadoraViewController : UIViewController{
+    double primerNumero;
+    double segundoNumero;
+    BOOL seHizoCalculo;
+    int operacionActual;
+}
 
 //Botones
 @property (weak, nonatomic) IBOutlet UIButton *botonCero;
@@ -24,7 +29,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *resultado;
 
 - (IBAction)agregarNumero:(UIButton *)sender;
-
-
+- (IBAction)realizarOperacion:(UIButton *)sender;
+- (IBAction)mostrarResultado:(id)sender;
 
 @end

@@ -16,7 +16,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    primerNumero = 0;
+    segundoNumero = 0;
+    seHizoCalculo = NO;
+    operacionActual = 0;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -35,7 +38,52 @@
 */
 
 - (IBAction)agregarNumero:(UIButton *)sender {
-    self.resultado.text = [self.resultado.text stringByAppendingString:sender.titleLabel.text];
+    if (seHizoCalculo){
+        primerNumero = 0;
+        segundoNumero = 0;
+        self.resultado.text = @"0";
+        seHizoCalculo = NO;
+        operacionActual = 0;
+    }
+    if ([self.resultado.text isEqualToString: @"0"]){
+        self.resultado.text = sender.titleLabel.text;
+    }else{
+        self.resultado.text = [self.resultado.text stringByAppendingString:sender.titleLabel.text];
+    }
+}
+
+- (IBAction)realizarOperacion:(UIButton *)sender {
+    operacionActual = sender.tag;
+    if (primerNumero == 0) {
+        primerNumero = [self.resultado.text doubleValue];
+        self.resultado.text = @"0";
+    }else{
+    switch (sender.tag) {
+        case 1:
+            NSLog(@"division");
+            break;
+        case 2:
+            NSLog(@"multiplicacion");
+            break;
+        case 3:
+            NSLog(@"resta");
+            break;
+        case 4:
+            NSLog(@"suma");
+               segundoNumero = primerNumero + [self.resultado.text doubleValue];
+                self.resultado.text = [NSString stringWithFormat:@"%@", [NSNumber numberWithDouble:segundoNumero]];
+            seHizoCalculo = YES;
+            break; 
+        default:
+            break;
+        }
+    }
+}
+
+- (IBAction)mostrarResultado:(id)sender {
+    UIButton *buttonWithTag = [[UIButton alloc] init];
+    buttonWithTag.tag = operacionActual;
+    [self realizarOperacion:buttonWithTag];
 }
 
 
