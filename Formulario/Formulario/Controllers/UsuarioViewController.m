@@ -7,6 +7,7 @@
 //
 
 #import "UsuarioViewController.h"
+#import "Usuario.h"
 
 @interface UsuarioViewController ()
 
@@ -34,9 +35,41 @@
 }
 */
 
+//[self.nombreTextField.text isEqualToString:@""]
+
+// ||UTILICEN GITHUB, les dara credibilidad a su proyecto y podre hacerles seguimientos
+
+
+
+
 
 - (IBAction)revisarFormulario:(UITextField *)sender {
+    
+    if ([self.nombreTextField.text isEqualToString:@""] || [self.apellidoTextField.text isEqualToString:@""] || [self.telefono.text isEqualToString:@""]){
+        self.botonGuardar.enabled = NO;
+    }else{
+        self.botonGuardar.enabled = YES;
+    }
 }
 - (IBAction)guardar:(id)sender {
+    
+    [self.nombreTextField resignFirstResponder];
+    [self.apellidoTextField resignFirstResponder];
+    [self.telefono resignFirstResponder];
+    
+    Usuario * user = [[Usuario alloc] init];
+    user.nombre = self.nombreTextField.text;
+    user.apellido = self.apellidoTextField.text;
+    user.telefono = [NSNumber numberWithInt:[self.telefono.text intValue]];
+    
+    UILabel *resultadoLbl = [[UILabel alloc] init];
+    resultadoLbl.text =  [NSString stringWithFormat:@"El usuario %@ %@ ha sido creado y su numero de telefono es %@", user.nombre , user.apellido, user.telefono];
+    
+    resultadoLbl.font = [UIFont fontWithName:@"Helvetica" size:20.0f];
+    [resultadoLbl setFrame:CGRectMake(20, 420, 300, 60)];
+    resultadoLbl.numberOfLines = 2;
+    [self.view addSubview:resultadoLbl];
+    
+    // el ususario x, y ha sido creado. y cuyo telefono es z.
 }
 @end
