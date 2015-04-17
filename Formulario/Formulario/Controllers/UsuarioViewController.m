@@ -56,16 +56,18 @@
 }
 
 - (IBAction)guardar:(id)sender {
-    
+    //guardar teclado
     [self.nombreTextField resignFirstResponder];
     [self.apellidoTextField resignFirstResponder];
     [self.telefono resignFirstResponder];
-    
+    //solucion alterna para guardar teclado
+    [self.view endEditing:YES];
+    //objeto Clase Usuario
     Usuario * user = [[Usuario alloc] init];
     user.nombre = self.nombreTextField.text;
     user.apellido = self.apellidoTextField.text;
     user.telefono = [NSNumber numberWithInt:[self.telefono.text intValue]];
-    
+    //UILabel programaticamente
     UILabel *resultadoLbl = [[UILabel alloc] init];
     resultadoLbl.text = [NSString stringWithFormat:@"El usuario %@ %@ ha sido creado y su numero de telefono es %@", user.nombre , user.apellido, user.telefono];
     
