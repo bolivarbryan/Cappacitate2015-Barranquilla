@@ -9,7 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @interface Usuario : NSObject
-
 @property (nonatomic, strong) NSString * nombre;
 @property (nonatomic, strong) NSString * apellido;
 @property (nonatomic, strong) NSNumber * telefono;

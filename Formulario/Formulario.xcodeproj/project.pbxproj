@@ -15,6 +15,7 @@
 		E8F148651AE196C6001B9D61 /* FormularioTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E8F148641AE196C6001B9D61 /* FormularioTests.m */; };
 		E8F148821AE19A06001B9D61 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8F148811AE19A06001B9D61 /* ViewController.m */; };
 		E8F148871AE19C10001B9D61 /* Usuario.m in Sources */ = {isa = PBXBuildFile; fileRef = E8F148861AE19C10001B9D61 /* Usuario.m */; };
+		E8F1488A1AE19DC1001B9D61 /* UsuarioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8F148891AE19DC1001B9D61 /* UsuarioViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,8 @@
 		E8F148811AE19A06001B9D61 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		E8F148851AE19C10001B9D61 /* Usuario.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Usuario.h; sourceTree = "<group>"; };
 		E8F148861AE19C10001B9D61 /* Usuario.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Usuario.m; sourceTree = "<group>"; };
+		E8F148881AE19DC1001B9D61 /* UsuarioViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UsuarioViewController.h; sourceTree = "<group>"; };
+		E8F148891AE19DC1001B9D61 /* UsuarioViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UsuarioViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +131,8 @@
 			children = (
 				E8F148801AE19A06001B9D61 /* ViewController.h */,
 				E8F148811AE19A06001B9D61 /* ViewController.m */,
+				E8F148881AE19DC1001B9D61 /* UsuarioViewController.h */,
+				E8F148891AE19DC1001B9D61 /* UsuarioViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -250,6 +255,7 @@
 			files = (
 				E8F148871AE19C10001B9D61 /* Usuario.m in Sources */,
 				E8F148821AE19A06001B9D61 /* ViewController.m in Sources */,
+				E8F1488A1AE19DC1001B9D61 /* UsuarioViewController.m in Sources */,
 				E8F1484E1AE196C6001B9D61 /* AppDelegate.m in Sources */,
 				E8F1484B1AE196C6001B9D61 /* main.m in Sources */,
 			);
