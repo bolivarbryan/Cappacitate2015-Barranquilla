@@ -424,6 +424,7 @@
 				E8D5B4141AE1544E0005351D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E8D5B4151AE1544E0005351D /* Build configuration list for PBXNativeTarget "CalculadoraTests" */ = {
 			isa = XCConfigurationList;
@@ -432,6 +433,7 @@
 				E8D5B4171AE1544E0005351D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
