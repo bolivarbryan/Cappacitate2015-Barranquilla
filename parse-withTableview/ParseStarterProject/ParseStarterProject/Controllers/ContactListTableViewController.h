@@ -7,11 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Parse/Parse.h>
 
 @interface ContactListTableViewController : UITableViewController{
     NSArray *arreglo;
     NSMutableArray *arregloDinamico;
     NSDictionary * usuarioSeleccionado;
+    PFObject * usuarioSeleccionadoComoPFObject;
 }
 
 @end

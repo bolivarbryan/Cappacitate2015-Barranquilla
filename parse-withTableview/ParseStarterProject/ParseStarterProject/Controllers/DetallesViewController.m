@@ -19,10 +19,7 @@
     NSLog(@"%@", self.usuario);
     self.nombre.text = [self.usuario objectForKey:@"nombre"];
     //self.imagen.image = [UIImage imageNamed:@"bryan"];
-    
-    
-    
-    
+
     dispatch_async(dispatch_get_global_queue(0,0), ^{
         NSData * imageData = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString: @"https://pbs.twimg.com/profile_images/588941692939718656/RVOEES2C_400x400.jpg"]];
         if ( imageData == nil )
@@ -55,5 +52,17 @@
 */
 
 - (IBAction)llamar:(id)sender {
+    PFObject *telefono = [PFObject objectWithClassName:@"Telefono"];
+    telefono[@"numero"] = @"323123";
+    telefono[@"tipo"] = @"fijo";
+    telefono[@"owner"] = self.usuarioActualizar;
+    [telefono saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if (succeeded) {
+            // The object has been saved.
+            
+        } else {
+            // There was a problem, check error.description
+        }
+    }];
 }
 @end

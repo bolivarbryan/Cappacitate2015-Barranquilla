@@ -123,7 +123,7 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     usuarioSeleccionado = (NSDictionary *)[arregloDinamico objectAtIndex:indexPath.row];
-    
+    usuarioSeleccionadoComoPFObject = (PFObject *)[arregloDinamico objectAtIndex:indexPath.row];
     [self performSegueWithIdentifier:@"DetailsSegue" sender:self];
 }
 
@@ -137,6 +137,7 @@
     if ([segue.identifier isEqualToString:@"DetailsSegue"]){
         DetallesViewController *vc = [segue destinationViewController];
         vc.usuario = usuarioSeleccionado;
+        vc.usuarioActualizar = usuarioSeleccionadoComoPFObject;
     }
 }
 

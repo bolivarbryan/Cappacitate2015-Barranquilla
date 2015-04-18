@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Parse/Parse.h>
 
 @interface DetallesViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIImageView *imagen;
@@ -15,5 +16,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *nombre;
 @property (weak, nonatomic) IBOutlet UIButton *telefono;
 - (IBAction)llamar:(id)sender;
+
 @property (nonatomic, weak) NSDictionary * usuario;
+@property (nonatomic, weak) PFObject * usuarioActualizar;
+
 @end
