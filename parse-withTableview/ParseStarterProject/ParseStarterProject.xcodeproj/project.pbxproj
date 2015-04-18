@@ -149,6 +149,7 @@
 		09ABC07713A1D52D009C3FCF /* ParseStarterProject */ = {
 			isa = PBXGroup;
 			children = (
+				E8DF9B191AE2B47E005EC55E /* Views */,
 				E8DF9B121AE28F82005EC55E /* Controllers */,
 				09ABC08013A1D52D009C3FCF /* ParseStarterProjectAppDelegate.h */,
 				09ABC08113A1D52D009C3FCF /* ParseStarterProjectAppDelegate.m */,
@@ -156,7 +157,6 @@
 				09ABC08613A1D52E009C3FCF /* ParseStarterProjectViewController.h */,
 				09ABC08713A1D52E009C3FCF /* ParseStarterProjectViewController.m */,
 				09ABC07813A1D52D009C3FCF /* Supporting Files */,
-				E8F1488B1AE1C186001B9D61 /* MiStoryboard.storyboard */,
 			);
 			path = ParseStarterProject;
 			sourceTree = "<group>";
@@ -205,10 +205,26 @@
 			children = (
 				E8DF9B131AE28FC0005EC55E /* ContactListTableViewController.h */,
 				E8DF9B141AE28FC0005EC55E /* ContactListTableViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		E8DF9B191AE2B47E005EC55E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E8F1488B1AE1C186001B9D61 /* MiStoryboard.storyboard */,
+				E8DF9B1A1AE2B489005EC55E /* Cells */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		E8DF9B1A1AE2B489005EC55E /* Cells */ = {
+			isa = PBXGroup;
+			children = (
 				E8DF9B161AE29617005EC55E /* ContactTableViewCell.h */,
 				E8DF9B171AE29617005EC55E /* ContactTableViewCell.m */,
 			);
-			name = Controllers;
+			name = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

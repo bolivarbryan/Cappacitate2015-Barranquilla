@@ -20,4 +20,8 @@
     // Configure the view for the selected state
 }
 
+-(IBAction)llamarContacto:(UIButton *)sender{
+    NSLog(@"LLamando a %@", sender.titleLabel.text);
+    sender.selected = YES;
+}
 @end

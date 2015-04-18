@@ -8,6 +8,7 @@
 
 #import "ContactListTableViewController.h"
 #import <Parse/Parse.h>
+#import "ContactTableViewCell.h"
 
 @interface ContactListTableViewController ()
 
@@ -29,7 +30,7 @@
 
 -(void)obtenerContactos{
     arregloDinamico = [[NSMutableArray alloc] init];
-    arreglo = @[@"grupo numero 1" , @"grupo numero 2"];
+    arreglo = @[@"grupo numero 1"];
     PFQuery *consulta = [PFQuery queryWithClassName:@"Usuario"];
     [consulta findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
@@ -85,10 +86,27 @@
     }
     
 }
-
+-(CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 92.0f;
+}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ContactCellIdentifier" forIndexPath:indexPath];
+    
+    PFObject * usuario = [arregloDinamico objectAtIndex:indexPath.row];
+    
+    ContactTableViewCell *cell = (ContactTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"CustomContactCellIdentifier"];
+    
+    cell.nombre.text = [NSString stringWithFormat:@"%@ %@", [usuario objectForKey:@"nombre"],[usuario objectForKey:@"apellido"]];
+    
+    [cell.telefono setTitle:[usuario objectForKey:@"telefono"] forState:UIControlStateNormal];
+    
+    [cell.telefono setTitle:@"Llamando"forState:UIControlStateSelected];
+    [cell.telefono setTitle:@"Manten presionado para llamar" forState:UIControlStateHighlighted];
+    
+
+    //UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ContactCellIdentifier" forIndexPath:indexPath];
+    
+    /*
     if (indexPath.section == 0){
         PFObject * usuario = [arregloDinamico objectAtIndex:indexPath.row];
         cell.textLabel.text = [NSString stringWithFormat:@"%@ %@", [usuario objectForKey:@"nombre"],[usuario objectForKey:@"apellido"]];
@@ -96,7 +114,7 @@
         cell.textLabel.text = @"grupo 2";
     }
     
-    // Configure the cell...
+   */
     
     return cell;
 }

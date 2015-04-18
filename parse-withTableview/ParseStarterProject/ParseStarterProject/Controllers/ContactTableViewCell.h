@@ -10,5 +10,6 @@
 
 @interface ContactTableViewCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *nombre;
-    
+@property (weak, nonatomic) IBOutlet UIButton *telefono;
+-(IBAction)llamarContacto:(UIButton *)sender;
 @end
