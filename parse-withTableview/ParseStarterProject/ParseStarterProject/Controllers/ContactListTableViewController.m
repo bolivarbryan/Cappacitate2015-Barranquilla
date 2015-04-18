@@ -28,8 +28,27 @@
                   forControlEvents:UIControlEventValueChanged];
 
     NSDictionary *dict = @{@"nombre":@"bryan", @"apellido":@"bolivar"};
+    
+    
 }
 
+-(void)hacerUnLlamadoAWebService{
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"colocaurlaqui"]];
+    [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+        if (!data) {
+            NSLog(@"%s: sendAynchronousRequest error: %@", __FUNCTION__, connectionError);
+            return;
+        } else if ([response isKindOfClass:[NSHTTPURLResponse class]]) {
+            NSInteger statusCode = [(NSHTTPURLResponse *)response statusCode];
+            if (statusCode != 200) {
+                NSLog(@"%s: sendAsynchronousRequest status code != 200: response = %@", __FUNCTION__, response);
+                return;
+            }
+        }
+        NSLog(@"%s: sendAsynchronousRequest status code != 200: response = %@", __FUNCTION__, [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
+        // now you can use your `dictionary` object
+    }];
+}
 -(void)obtenerContactos{
     arregloDinamico = [[NSMutableArray alloc] init];
     arreglo = @[@"grupo numero 1"];

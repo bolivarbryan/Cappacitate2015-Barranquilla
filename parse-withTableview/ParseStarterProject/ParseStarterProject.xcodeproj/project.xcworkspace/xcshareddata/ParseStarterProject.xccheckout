@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>58C850F4-CBB4-479F-9B35-3C63E87B8C91</string>
 	<key>IDESourceControlProjectName</key>
-	<string>ParseStarterProject</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>3382C44CBB3E222E9A3F178660749FFFA00CDFED</key>
 		<string>github.com:bolivarbryan/Cappacitate2015-Barranquilla.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>parse-withTableview/ParseStarterProject/ParseStarterProject.xcodeproj</string>
+	<string>parse-withTableview/ParseStarterProject/ParseStarterProject.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>3382C44CBB3E222E9A3F178660749FFFA00CDFED</key>
