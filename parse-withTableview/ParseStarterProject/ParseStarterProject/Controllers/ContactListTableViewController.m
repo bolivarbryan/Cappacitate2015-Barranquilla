@@ -7,6 +7,7 @@
 //
 
 #import "ContactListTableViewController.h"
+#import <Parse/Parse.h>
 
 @interface ContactListTableViewController ()
 
@@ -16,12 +17,32 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self obtenerContactos];
+    self.refreshControl = [[UIRefreshControl alloc] init];
+    self.refreshControl.backgroundColor = [UIColor purpleColor];
+    self.refreshControl.tintColor = [UIColor whiteColor];
+    [self.refreshControl addTarget:self
+                            action:@selector(obtenerContactos)
+                  forControlEvents:UIControlEventValueChanged];
+
+}
+
+-(void)obtenerContactos{
+    arregloDinamico = [[NSMutableArray alloc] init];
     arreglo = @[@"grupo numero 1" , @"grupo numero 2"];
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    PFQuery *consulta = [PFQuery queryWithClassName:@"Usuario"];
+    [consulta findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            NSMutableArray * tmpArray = [[NSMutableArray alloc] init];
+            tmpArray =[NSMutableArray arrayWithArray:objects];
+            arregloDinamico  = tmpArray;
+            tmpArray = nil;
+            [self.tableView reloadData];
+            [self.refreshControl endRefreshing];
+        } else {
+            NSLog(@"Error: %@ %@", error, [error userInfo]);
+        }
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -58,7 +79,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     if (section == 0){
-        return 3;
+        return arregloDinamico.count;
     }else{
         return 6;
     }
@@ -69,7 +90,8 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ContactCellIdentifier" forIndexPath:indexPath];
     if (indexPath.section == 0){
-        cell.textLabel.text = @"grupo 1";
+        PFObject * usuario = [arregloDinamico objectAtIndex:indexPath.row];
+        cell.textLabel.text = [NSString stringWithFormat:@"%@ %@", [usuario objectForKey:@"nombre"],[usuario objectForKey:@"apellido"]];
     }else{
         cell.textLabel.text = @"grupo 2";
     }
