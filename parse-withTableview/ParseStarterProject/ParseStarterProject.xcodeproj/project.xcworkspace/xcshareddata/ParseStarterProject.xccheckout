@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>58C850F4-CBB4-479F-9B35-3C63E87B8C91</string>
+	<key>IDESourceControlProjectName</key>
+	<string>ParseStarterProject</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>3382C44CBB3E222E9A3F178660749FFFA00CDFED</key>
+		<string>github.com:bolivarbryan/Cappacitate2015-Barranquilla.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>parse-withTableview/ParseStarterProject/ParseStarterProject.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>3382C44CBB3E222E9A3F178660749FFFA00CDFED</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:bolivarbryan/Cappacitate2015-Barranquilla.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>3382C44CBB3E222E9A3F178660749FFFA00CDFED</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>3382C44CBB3E222E9A3F178660749FFFA00CDFED</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Cappacitate2015-Barranquilla</string>
+		</dict>
+	</array>
+</dict>
+</plist>

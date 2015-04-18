@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ContactListTableViewController : UITableViewController
+@interface ContactListTableViewController : UITableViewController{
+    NSArray *arreglo;
+    NSMutableArray *arregloDinamico;
+}
 
 @end

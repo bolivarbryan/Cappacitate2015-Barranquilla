@@ -16,7 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    arreglo = @[@"grupo numero 1" , @"grupo numero 2"];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -31,20 +31,29 @@
 
 #pragma mark - Bryan Methods
 - (CGFloat) tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    return 10.0f;
+    return 40.0f;
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
     UIView * vistaHeader = [[UIView alloc] init];
-    vistaHeader.frame = CGRectMake(0, 0, self.tableView.frame.size.width, 10);
+    vistaHeader.frame = CGRectMake(0, 0, self.tableView.frame.size.width, 40);
     vistaHeader.backgroundColor = [UIColor colorWithRed:61.0f/255 green:150.0f/255 blue:200.0f/255 alpha:1];
     
+    UILabel * titulo = [[UILabel alloc] init];
+    titulo.frame = CGRectMake(0, 0, self.tableView.frame.size.width, 40);
+    titulo.textColor = [UIColor whiteColor];
+    
+    if ([arreglo[section] isKindOfClass:[NSString class]]) {
+        titulo.text = [NSString stringWithFormat:@"%@", arreglo[section]];
+
+    }
+    [vistaHeader addSubview:titulo];
     return vistaHeader;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     // Return the number of sections.
-    return 2;
+    return arreglo.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
