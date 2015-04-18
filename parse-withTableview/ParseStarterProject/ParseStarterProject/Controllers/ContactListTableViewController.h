@@ -11,6 +11,7 @@
 @interface ContactListTableViewController : UITableViewController{
     NSArray *arreglo;
     NSMutableArray *arregloDinamico;
+    NSDictionary * usuarioSeleccionado;
 }
 
 @end

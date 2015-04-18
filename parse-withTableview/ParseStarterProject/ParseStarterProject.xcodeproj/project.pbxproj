@@ -31,12 +31,13 @@
 		81DDFD1919B4A60300BE649C /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81DDFD1719B4A60300BE649C /* Parse.framework */; };
 		81DDFD1A19B4A60300BE649C /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81DDFD1819B4A60300BE649C /* ParseFacebookUtils.framework */; };
 		91D261791A36EB67005D713D /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 91D261781A36EB67005D713D /* libsqlite3.0.dylib */; };
-		C4C51B571613CE0800959FDC /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = C4C51B541613CE0800959FDC /* Default.png */; };
-		C4C51B581613CE0800959FDC /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C4C51B551613CE0800959FDC /* Default-568h@2x.png */; };
-		C4C51B591613CE0800959FDC /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C4C51B561613CE0800959FDC /* Default@2x.png */; };
 		DD952FCB16E7F5CF00470144 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97E18B1E1624CB5700B17A67 /* CoreLocation.framework */; };
 		E8DF9B151AE28FC0005EC55E /* ContactListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8DF9B141AE28FC0005EC55E /* ContactListTableViewController.m */; };
 		E8DF9B181AE29617005EC55E /* ContactTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E8DF9B171AE29617005EC55E /* ContactTableViewCell.m */; };
+		E8DF9B1D1AE2C04E005EC55E /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DF9B1C1AE2C04E005EC55E /* DetailsViewController.swift */; };
+		E8DF9B201AE2C2E3005EC55E /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DF9B1F1AE2C2E3005EC55E /* Usuario.swift */; };
+		E8DF9B231AE2CCB7005EC55E /* DetallesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8DF9B221AE2CCB7005EC55E /* DetallesViewController.m */; };
+		E8DF9B251AE2CF2A005EC55E /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8DF9B241AE2CF2A005EC55E /* Media.xcassets */; };
 		E8F1488C1AE1C186001B9D61 /* MiStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8F1488B1AE1C186001B9D61 /* MiStoryboard.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -75,13 +76,16 @@
 		81DDFD1819B4A60300BE649C /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
 		91D261781A36EB67005D713D /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		97E18B1E1624CB5700B17A67 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		C4C51B541613CE0800959FDC /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		C4C51B551613CE0800959FDC /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		C4C51B561613CE0800959FDC /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		E8DF9B131AE28FC0005EC55E /* ContactListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContactListTableViewController.h; path = Controllers/ContactListTableViewController.h; sourceTree = "<group>"; };
 		E8DF9B141AE28FC0005EC55E /* ContactListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ContactListTableViewController.m; path = Controllers/ContactListTableViewController.m; sourceTree = "<group>"; };
 		E8DF9B161AE29617005EC55E /* ContactTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContactTableViewCell.h; path = Controllers/ContactTableViewCell.h; sourceTree = "<group>"; };
 		E8DF9B171AE29617005EC55E /* ContactTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ContactTableViewCell.m; path = Controllers/ContactTableViewCell.m; sourceTree = "<group>"; };
+		E8DF9B1B1AE2C04D005EC55E /* ParseStarterProject-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ParseStarterProject-Bridging-Header.h"; sourceTree = "<group>"; };
+		E8DF9B1C1AE2C04E005EC55E /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailsViewController.swift; path = Controllers/DetailsViewController.swift; sourceTree = "<group>"; };
+		E8DF9B1F1AE2C2E3005EC55E /* Usuario.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Usuario.swift; path = Models/Usuario.swift; sourceTree = "<group>"; };
+		E8DF9B211AE2CCB7005EC55E /* DetallesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetallesViewController.h; path = Controllers/DetallesViewController.h; sourceTree = "<group>"; };
+		E8DF9B221AE2CCB7005EC55E /* DetallesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetallesViewController.m; path = Controllers/DetallesViewController.m; sourceTree = "<group>"; };
+		E8DF9B241AE2CF2A005EC55E /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		E8F1488B1AE1C186001B9D61 /* MiStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MiStoryboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -149,6 +153,7 @@
 		09ABC07713A1D52D009C3FCF /* ParseStarterProject */ = {
 			isa = PBXGroup;
 			children = (
+				E8DF9B1E1AE2C2BD005EC55E /* Models */,
 				E8DF9B191AE2B47E005EC55E /* Views */,
 				E8DF9B121AE28F82005EC55E /* Controllers */,
 				09ABC08013A1D52D009C3FCF /* ParseStarterProjectAppDelegate.h */,
@@ -164,14 +169,12 @@
 		09ABC07813A1D52D009C3FCF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				C4C51B541613CE0800959FDC /* Default.png */,
-				C4C51B561613CE0800959FDC /* Default@2x.png */,
-				C4C51B551613CE0800959FDC /* Default-568h@2x.png */,
 				09ABC07913A1D52D009C3FCF /* Info.plist */,
 				09144A7213C2997E00388B00 /* Entitlements.plist */,
 				09ABC07A13A1D52D009C3FCF /* InfoPlist.strings */,
 				09ABC07D13A1D52D009C3FCF /* ParseStarterProject-Prefix.pch */,
 				09ABC07E13A1D52D009C3FCF /* main.m */,
+				E8DF9B241AE2CF2A005EC55E /* Media.xcassets */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -205,6 +208,10 @@
 			children = (
 				E8DF9B131AE28FC0005EC55E /* ContactListTableViewController.h */,
 				E8DF9B141AE28FC0005EC55E /* ContactListTableViewController.m */,
+				E8DF9B1C1AE2C04E005EC55E /* DetailsViewController.swift */,
+				E8DF9B1B1AE2C04D005EC55E /* ParseStarterProject-Bridging-Header.h */,
+				E8DF9B211AE2CCB7005EC55E /* DetallesViewController.h */,
+				E8DF9B221AE2CCB7005EC55E /* DetallesViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -225,6 +232,14 @@
 				E8DF9B171AE29617005EC55E /* ContactTableViewCell.m */,
 			);
 			name = Cells;
+			sourceTree = "<group>";
+		};
+		E8DF9B1E1AE2C2BD005EC55E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E8DF9B1F1AE2C2E3005EC55E /* Usuario.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,11 +295,9 @@
 			files = (
 				09ABC07C13A1D52D009C3FCF /* InfoPlist.strings in Resources */,
 				09ABC08513A1D52E009C3FCF /* MainWindow.xib in Resources */,
+				E8DF9B251AE2CF2A005EC55E /* Media.xcassets in Resources */,
 				09144A7313C2997E00388B00 /* Entitlements.plist in Resources */,
-				C4C51B571613CE0800959FDC /* Default.png in Resources */,
 				E8F1488C1AE1C186001B9D61 /* MiStoryboard.storyboard in Resources */,
-				C4C51B581613CE0800959FDC /* Default-568h@2x.png in Resources */,
-				C4C51B591613CE0800959FDC /* Default@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,11 +325,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8DF9B231AE2CCB7005EC55E /* DetallesViewController.m in Sources */,
 				E8DF9B151AE28FC0005EC55E /* ContactListTableViewController.m in Sources */,
 				09ABC07F13A1D52D009C3FCF /* main.m in Sources */,
+				E8DF9B201AE2C2E3005EC55E /* Usuario.swift in Sources */,
 				E8DF9B181AE29617005EC55E /* ContactTableViewCell.m in Sources */,
 				09ABC08213A1D52D009C3FCF /* ParseStarterProjectAppDelegate.m in Sources */,
 				09ABC08813A1D52E009C3FCF /* ParseStarterProjectViewController.m in Sources */,
+				E8DF9B1D1AE2C04E005EC55E /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,9 +386,13 @@
 		09ABC08F13A1D52E009C3FCF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				DEFINES_MODULE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)",
@@ -383,7 +403,10 @@
 				GCC_PREFIX_HEADER = "ParseStarterProject/ParseStarterProject-Prefix.pch";
 				INFOPLIST_FILE = ParseStarterProject/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ParseStarterProject/ParseStarterProject-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -391,9 +414,13 @@
 		09ABC09013A1D52E009C3FCF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
+				DEFINES_MODULE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)",
@@ -403,7 +430,9 @@
 				GCC_PREFIX_HEADER = "ParseStarterProject/ParseStarterProject-Prefix.pch";
 				INFOPLIST_FILE = ParseStarterProject/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ParseStarterProject/ParseStarterProject-Bridging-Header.h";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};

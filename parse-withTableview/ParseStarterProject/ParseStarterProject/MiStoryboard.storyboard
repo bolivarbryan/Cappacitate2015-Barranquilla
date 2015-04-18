@@ -222,18 +222,97 @@
             </objects>
             <point key="canvasLocation" x="3783" y="1096"/>
         </scene>
-        <!--View Controller-->
+        <!--Detalles View Controller-->
         <scene sceneID="HS4-2c-wMa">
             <objects>
-                <viewController id="UbC-ip-ZLz" sceneMemberID="viewController">
+                <viewController id="UbC-ip-ZLz" customClass="DetallesViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="B24-nq-1eV"/>
                         <viewControllerLayoutGuide type="bottom" id="fHW-zr-hTv"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="XLR-sc-erp">
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PRD-jb-Iib">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="252" id="6qH-lc-ezE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="6qH-lc-ezE"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="6qH-lc-ezE"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mxv-Sy-c7B">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="llamar:" destination="UbC-ip-ZLz" eventType="touchUpInside" id="3Yf-cN-k0k"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="v6v-PL-cWq">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="80" y="307" width="240" height="128"/>
+                                </variation>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="PRD-jb-Iib" firstAttribute="centerX" secondItem="mxv-Sy-c7B" secondAttribute="centerX" id="551-Pt-Ujc"/>
+                            <constraint firstAttribute="centerY" secondItem="PRD-jb-Iib" secondAttribute="centerY" constant="85.5" id="ArF-K7-qoU"/>
+                            <constraint firstItem="mxv-Sy-c7B" firstAttribute="top" secondItem="PRD-jb-Iib" secondAttribute="bottom" constant="28" id="E7N-S5-ezS"/>
+                            <constraint firstItem="PRD-jb-Iib" firstAttribute="height" secondItem="mxv-Sy-c7B" secondAttribute="height" id="b4p-da-lnI"/>
+                            <constraint firstAttribute="centerX" secondItem="PRD-jb-Iib" secondAttribute="centerX" id="paT-8Q-Jse"/>
+                            <constraint firstItem="PRD-jb-Iib" firstAttribute="width" secondItem="mxv-Sy-c7B" secondAttribute="width" id="qJ5-MI-WdW"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="PRD-jb-Iib"/>
+                                <exclude reference="mxv-Sy-c7B"/>
+                                <exclude reference="v6v-PL-cWq"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="551-Pt-Ujc"/>
+                                <exclude reference="ArF-K7-qoU"/>
+                                <exclude reference="b4p-da-lnI"/>
+                                <exclude reference="paT-8Q-Jse"/>
+                                <exclude reference="qJ5-MI-WdW"/>
+                                <exclude reference="E7N-S5-ezS"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="PRD-jb-Iib"/>
+                                <include reference="mxv-Sy-c7B"/>
+                                <include reference="v6v-PL-cWq"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="551-Pt-Ujc"/>
+                                <include reference="ArF-K7-qoU"/>
+                                <include reference="b4p-da-lnI"/>
+                                <include reference="paT-8Q-Jse"/>
+                                <include reference="qJ5-MI-WdW"/>
+                                <include reference="E7N-S5-ezS"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="imagen" destination="v6v-PL-cWq" id="Fpp-5m-qnk"/>
+                        <outlet property="nombre" destination="PRD-jb-Iib" id="qf8-M8-Fv6"/>
+                        <outlet property="telefono" destination="mxv-Sy-c7B" id="CK2-kO-gh8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dRU-71-tmf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
